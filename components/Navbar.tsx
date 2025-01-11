@@ -1,56 +1,5 @@
-// "use client";
-
-// import Link from "next/link";
-// import { ModeToggle } from "./theme-toggle";
-// import {
-//   SignInButton,
-//   SignOutButton,
-//   SignedIn,
-//   SignedOut,
-// } from "@clerk/nextjs";
-
-// export default function Navbar() {
-//   const isSigned = true;
-//   return (
-//     <nav className="bg-background border-b">
-//       <div className="max-w-7xl mx-auto  flex justify-between items-center h-16 text-lg">
-//         <Link href="/" className="p-2  font-medium">
-//           <h1 className="font-bold tight bg-gradient-to-b from-black to-[#c015cc] text-transparent bg-clip-text ">
-//             ThumbSpot{" "}
-//           </h1>
-//         </Link>
-
-//         <div className="space-x-2">
-//           {isSigned ? (
-//             <>
-//               <Link href="/dashboard" className="p-2 font-medium">
-//                 Product
-//               </Link>
-//               <Link href="/dashboard/profile" className="p-2 font-medium">
-//                 Profile
-//               </Link>
-//             </>
-//           ) : (
-//             <></>
-//           )}
-//           <Link href="/pricing">Pricing</Link>
-//         </div>
-//         <div className="space-x-4 flex items-center">
-//           <ModeToggle />
-//           <SignedOut>
-//             <SignInButton />
-//           </SignedOut>
-//           <SignedIn>
-//             <SignOutButton />
-//           </SignedIn>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
 
 "use client";
-
 import Link from "next/link";
 import { ModeToggle } from "./theme-toggle";
 import {
@@ -91,7 +40,7 @@ export default function Navbar() {
                   Product
                 </Link>
                 <Link
-                  href="/dashboard/profile"
+                  href="/dashboard"
                   className="block p-2 font-medium"
                 >
                   Profile
