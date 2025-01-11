@@ -2,20 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 99%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346.8 77.2% 49.8%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 5% 6%;
+    --foreground: 60 5% 90%;
+    --primary: 240 0% 90%;
+    --primary-foreground: 60 0% 0%;
+    --secondary: 240 4% 15%;
+    --secondary-foreground: 60 5% 85%;
+    --accent: 240 0% 13%;
+    --accent-foreground: 60 0% 100%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --muted: 240 5% 25%;
+    --muted-foreground: 60 5% 85%;
+    --card: 240 4% 10%;
+    --card-foreground: 60 5% 90%;
+    --popover: 240 5% 15%;
+    --popover-foreground: 60 5% 85%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 240 5% 90%;
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-[#a14065] via-[#c404c4] to-[#0e5bbf] text-transparent bg-clip-text;
+}
+
+.gradient-button {
+  @apply bg-gradient-to-r from-[#863554] via-[#b104b1] to-[#0a4ba0];
+}
+
+@layer components {
+  .btn {
+    @apply bg-black text-white py-2 px-4 rounded-lg tracking-tight font-medium justify-center items-center;
+  }
+  .btn-primary {
+    @apply bg-black text-white;
+  }
+  .btn-text {
+    @apply text-black bg-transparent;
+  }
+  .logo-ticker-image {
+    @apply h-8 w-auto;
+  }
+  .tag {
+    @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
+  }
+  .section-title {
+    @apply text-3xl md:text-5xl font-bold tracking-tight bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text text-center;
+  }
+  .section-subtitle {
+    @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
+  }
+  .card {
+    @apply p-10 border border-[#222222]/10 rounded-3xl shadow-[0_10px_16px_#EAEAEA] max-w-xs w-full;
+  }
 }
