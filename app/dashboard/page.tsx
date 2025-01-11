@@ -11,7 +11,7 @@ export default async function Dashboard() {
         Welcome To ThumbSpot
       </p>
       <Button className="bg-gradient-to-b from-black to-[#c015cc] text-transparent bg-clip-text">
-        <Link href="/pricing">Subscribe</Link>
+        <Link href="/dashboard">Subscribe</Link>
       </Button>
 
       <div className="">

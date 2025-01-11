@@ -47,7 +47,7 @@ export default function Navbar() {
                 </Link>
               </>
             )}
-            <Link href="/pricing" className="block p-2 font-medium">
+            <Link href="/dashboard" className="block p-2 font-medium">
               Pricing
             </Link>
           </div>
